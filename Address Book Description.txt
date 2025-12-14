@@ -1,0 +1,77 @@
+Name - Rushikesh Uttam Ghuge
+Batch-Id - 25031C_068
+Date - 11/12/2025
+Project Title - Address Book
+Full Project Description  :-
+
+Introduction :
+The Address Book Management System is a modular, menu-driven C program designed to manage personal contact information.
+It allows users to add, list, search, edit, and delete contacts. Each contact contains a name, phone number, and email ID. 
+Data is stored persistently in a plain text file, allowing the program to retain information between sessions.
+The project demonstrates strong usage of structures, string manipulation, file inpt output. 
+
+Modules :
+1. main.c
+* Displays menu options
+* Calls appropriate functions for each operation
+* Runs the program loop until the user exits
+2. contact.c
+* Initializes the address book and loads data from file
+* Handles creation of multiple contacts
+* Lists all contacts in a formatted table
+3. search.c
+* Search by name 
+* Search by phone number
+* Search by email ID
+4. edit.c
+* Edit name, phone, or email of an existing contact
+* Includes validation rules and duplicate checking
+* Allows user to select correct contact when multiple matches exist
+5. delete.c
+* Delete by name, phone, or email
+* Handles multiple matches by offering a selection menu
+* Shifts contact records after deletion to maintain correct order
+6. validation.c
+  Contains strict validation rules: - 
+* Name: - Must start with uppercase letter.
+          No digits or special symbols allowed. 
+          No leading/trailing spaces. 
+          No multiple continuous spaces. 
+* Phone: - Must be exactly 10 digits - Digits only. 
+* Email: - Must end with @gmail.com.
+           No spaces allowed - Allowed characters before @ are letters, digits, dot, and underscore 
+           Duplicate checking for phone and email
+7. file.c
+* Saves all contacts into a simple text file named contacts.txt
+* Loads contacts from the same file when program starts
+
+
+Program Flow :
+1. Program starts
+2. Loads existing contacts from contacts.txt
+3. Displays menu to user
+4. User selects an operation (create, search, edit, delete, list, save)
+5. Program performs required action
+6. On save, the program writes all contacts to file
+
+How to Compile
+gcc *.c 
+
+Run the program:
+./a.out
+
+Simple Data File Format :
+The program stores data in a plain text file.
+Format: 1. First line contains total contact count in the form: #<number_of_contacts> 
+        2. Each following line contains one contact in comma-separated format: Name,Phone,Email
+
+Example file:
+#3
+John Doe,9876543210,johndoe@gmail.com
+Amit Sharma,9123456789,amitsharma@gmail.com
+ram Patil,9988776655,ram.patil@gmail.com
+This simple format makes loading and saving operations straightforward.
+
+
+
+
